@@ -1,45 +1,23 @@
+def is_valide(a, b, c):
+    if (a >= (b + c)) or (b >= (a + c)) or (c >= (a + b)):
+        return False
+    else:
+        return True
 
-<!-- saved from url=(0076)file:///home/djafri/PycharmProjects/pythonProject3/exportToHTML/main.py.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>main.py</title>
+def is_isocelle(a, b, c):
+    if is_valide(a, b, c):
+        if len({a, b, c}) <= 2:
+            return True
+        else:
+            return False
+    else:
+        return 'les trois valeurs ne peuvent pas définir un triangle'
 
-<style type="text/css">
-.s0 { color: #cc7832;}
-.s1 { color: #a9b7c6;}
-.s2 { color: #6897bb;}
-.s3 { color: #6a8759;}
-</style>
-</head>
-<body bgcolor="#2b2b2b">
-<table cellspacing="0" cellpadding="5" cols="1" width="100%" bgcolor="#606060">
-<tbody><tr><td><center>
-<font face="Arial, Helvetica" color="#000000">
-main.py</font>
-</center></td></tr></tbody></table>
-<pre><span class="s0">def </span><span class="s1">is_valide(a</span><span class="s0">, </span><span class="s1">b</span><span class="s0">, </span><span class="s1">c):</span>
-    <span class="s0">if </span><span class="s1">(a &gt;= (b + c)) </span><span class="s0">or </span><span class="s1">(b &gt;= (a + c)) </span><span class="s0">or </span><span class="s1">(c &gt;= (a + b)):</span>
-        <span class="s0">return False</span>
-    <span class="s0">else</span><span class="s1">:</span>
-        <span class="s0">return True</span>
+is_isocelle(2,2,1)
+print(is_isocelle(2,2,1))
 
-<span class="s0">def </span><span class="s1">is_isocelle(a</span><span class="s0">, </span><span class="s1">b</span><span class="s0">, </span><span class="s1">c):</span>
-    <span class="s0">if </span><span class="s1">is_valide(a</span><span class="s0">, </span><span class="s1">b</span><span class="s0">, </span><span class="s1">c):</span>
-        <span class="s0">if </span><span class="s1">len({a</span><span class="s0">, </span><span class="s1">b</span><span class="s0">, </span><span class="s1">c}) &lt;= </span><span class="s2">2</span><span class="s1">:</span>
-            <span class="s0">return True</span>
-        <span class="s0">else</span><span class="s1">:</span>
-            <span class="s0">return False</span>
-    <span class="s0">else</span><span class="s1">:</span>
-        <span class="s0">return </span><span class="s3">'les trois valeurs ne peuvent pas définir un triangle'</span>
+is_isocelle(2,2,2)
+print(is_isocelle(2,2,2))
 
-<span class="s1">is_isocelle(</span><span class="s2">2</span><span class="s0">,</span><span class="s2">2</span><span class="s0">,</span><span class="s2">1</span><span class="s1">)</span>
-<span class="s1">print(is_isocelle(</span><span class="s2">2</span><span class="s0">,</span><span class="s2">2</span><span class="s0">,</span><span class="s2">1</span><span class="s1">))</span>
-
-<span class="s1">is_isocelle(</span><span class="s2">2</span><span class="s0">,</span><span class="s2">2</span><span class="s0">,</span><span class="s2">2</span><span class="s1">)</span>
-<span class="s1">print(is_isocelle(</span><span class="s2">2</span><span class="s0">,</span><span class="s2">2</span><span class="s0">,</span><span class="s2">2</span><span class="s1">))</span>
-
-<span class="s1">is_isocelle(</span><span class="s2">2</span><span class="s0">,</span><span class="s2">4</span><span class="s0">,</span><span class="s2">1</span><span class="s1">)</span>
-<span class="s1">print(is_isocelle(</span><span class="s2">2</span><span class="s0">,</span><span class="s2">4</span><span class="s0">,</span><span class="s2">1</span><span class="s1">))</span>
-
-</pre>
-
-</body></html>
+is_isocelle(2,4,1)
+print(is_isocelle(2,4,1))
