@@ -1,0 +1,10 @@
+def is_valide(a, b, c):
+    if (a >= (b+c)) or (b >= (a+c)) or (c >= (a+b)):
+        return False
+    else :
+        return True
+is_valide(1,1,20)
+print(is_valide(1,1,20))
+
+is_valide(4,2,3)
+print(is_valide(4,2,3))
